@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 resource "aws_instance" "flask_api" {
-  ami           = "ami-id"  # Remplacez par l'ID de l'AMI souhaité
+  ami           = "X5dxNpJSjp/oJTFH/oiRQAlJzOSm7r2g/Y9A2DTM"
   instance_type = "t2.micro"
 
   tags = {
