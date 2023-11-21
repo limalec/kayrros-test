@@ -9,7 +9,7 @@ def get_co2_emission():
     with open('data.csv', 'r') as csv_file:
         try:
             latest_co2_emission = csv_file.readlines()[-1].split(',')[5]
-            return jsonify({"latest_co2_emission": latest_co2_emission})
+            return jsonify({"latest_co2_emission": str(float(latest_co2_emission) / 1000000)})
         except ValueError:
             return jsonify({"error": "Error fetching"}), 500
 
